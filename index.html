@@ -1,0 +1,142 @@
+<!-- Hanan Alif M -->
+<!-- 5220411259 -->
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Personal website for H.A.M. showcasing skills, experience, and contact information.">
+    <link rel="stylesheet" href="style.css">
+    <title>Hanan Alif M</title>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+
+<body>
+    <header id="header" class="header">
+        <a href="#" class="logo">H.A.M</a>
+        <nav class="navbar" id="navbar">
+            <a href="#" class="active">Home</a>
+            <a href="#about">About</a>
+            <a href="#contact">Contact</a>
+            <i class='bx bx-menu' id="menu-icon"></i>
+        </nav>
+    </header>
+
+    <section class="home">
+        <div class="home-image">
+            <img src="https://s4.bukalapak.com/twinkle/reviews/932603602/medium/data.jpg.webp" alt="Placeholder Image">
+        </div>
+
+        <div class="home-content">
+            <h1>HI, I'm HAM</h1>
+            <h3>Technology Enthusiast</h3>
+            <p>blablablablablablablablablabla</p>
+
+            <div class="home-sci">
+                <a href="https://www.facebook.com/"><i class='bx bxl-facebook-square'></i></a>
+                <a href="https://twitter.com/"><i class='bx bxl-twitter'></i></a>
+                <a href="https://www.instagram.com/"><i class='bx bxl-instagram'></i></a>
+                <a href="https://www.linkedin.com/"><i class='bx bxl-linkedin'></i></a>
+            </div>
+
+            <a href="#" class="btn">My CV</a>
+        </div>
+    </section>
+
+    <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="about-col-1">
+                    <img src="https://standards.ieee.org/wp-content/uploads/2021/12/Connected-technologies-1920x1080-1.jpg" alt="About Image">
+                </div>
+                <div class="about-col-2">
+                    <h1 class="sub-title">About Me</h1>
+                    <p> Mahasiswa Informatika dan Seorang Peminat Teknologi</p>
+                    <div class="tab-title">
+                        <p class="tab-links active-link" onclick="opentab('skills', event)">Skills</p>
+                        <p class="tab-links" onclick="opentab('experience', event)">Experience</p>
+                        <p class="tab-links" onclick="opentab('education', event)">Education</p>
+                    </div>
+                    <div class="tab-contents active-tab" id="skills">
+                        <ul>
+                            <li><span>Gamming</span><br>Pemula</li>
+                            <li><span>Gamming</span><br>Mendingan</li>
+                            <li><span>Gamming</span><br>Sepuh</li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="experience">
+                        <ul>
+                            <li><span>Blom Ada</span><br>Dinantikan</li>
+                            <li><span>Blom Ada</span><br>Dinantikan</li>
+                            <li><span>Blom Ada</span><br>Dinantikan</li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="education">
+                        <ul>
+                            <li><span>SD</span><br>Lulus</li>
+                            <li><span>SMP</span><br>Lulus</li>
+                            <li><span>SMA</span><br>Lulus</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="contact">
+        <div class="container">
+            <div class="row">
+                <div class="contact-left">
+                    <h1 class="sub-title">Contact Me</h1>
+                    <P><i class='bx bx-envelope'></i>contact@email.com</P>
+                    <P><i class='bx bxs-phone'></i>+123456789</P>
+                    <div class="social-icons">
+                        <a href="https://www.facebook.com/"><i class='bx bxl-facebook-square'></i></a>
+                        <a href="https://twitter.com/"><i class='bx bxl-twitter'></i></a>
+                        <a href="https://www.instagram.com/"><i class='bx bxl-instagram'></i></a>
+                        <a href="https://www.linkedin.com/"><i class='bx bxl-linkedin'></i></a>
+                    </div>
+                </div>
+                <div class="contact-right">
+                    <form>
+                        <input type="text" name="Name" placeholder="Your Name" required>
+                        <input type="email" name="email" placeholder="Your Email" required>
+                        <textarea name="message" rows="6" placeholder="Your Message"></textarea>
+                        <button type="submit" class="btn btn2">Submit</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="copyright">
+        <p>Copyright by <link rel="stylesheet" href="#">HAM</p>
+    </div>
+
+    <script>
+        var tablinks = document.getElementsByClassName("tab-links");
+        var tabcontents = document.getElementsByClassName("tab-contents");
+    
+        function opentab(tabname, event) {
+          for (let tablink of tablinks) {
+            tablink.classList.remove("active-link");
+          }
+          for (let tabcontent of tabcontents) {
+            tabcontent.classList.remove("active-tab");
+          }
+          event.currentTarget.classList.add("active-link");
+          document.getElementById(tabname).classList.add("active-tab");
+        }
+    
+        const menuIcon = document.getElementById('menu-icon');
+        const navbar = document.getElementById('navbar');
+        menuIcon.addEventListener('click', () => {
+          navbar.classList.toggle('active');
+        });
+      </script>
+
+</body>
+
+</html>
